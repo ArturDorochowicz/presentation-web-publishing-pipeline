@@ -1,0 +1,5 @@
+*.suo
+*.user
+/packages/
+/MvcApplication1/bin/
+/MvcApplication1/obj/
