@@ -28,9 +28,9 @@ task build2 -description "Explict settings with logging" {
 			DeployTarget = 'Package'   # default: Package
 			AutoParameterizationWebConfigConnectionStrings = 'false'  # default: true 
 			EnablePackageProcessLoggingAndAssert = 'true'   # default: false
-            FilesToIncludeForPublish = 'OnlyFilesToRunTheApp'   #  AllFilesInProjectFolder, AllFilesInTheProject, default: OnlyFilesToRunTheApp
-            WebPublishPipelineProjectName = 'MyWebApp'   # default: project name
-            DefaultDeployIisAppPath = 'Default Web Site\MyWebApp123'   # default: Default Web Site\project name
+			FilesToIncludeForPublish = 'OnlyFilesToRunTheApp'   #  AllFilesInProjectFolder, AllFilesInTheProject, default: OnlyFilesToRunTheApp
+			WebPublishPipelineProjectName = 'MyWebApp'   # default: project name
+			DefaultDeployIisAppPath = 'Default Web Site\MyWebApp123'   # default: Default Web Site\project name
 		})
 }
 
