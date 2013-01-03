@@ -20,18 +20,29 @@ task build1 -description "Default behavior" {
 		-Property $Properties
 }
 
-task build2 -description "Explict settings and logging" {
+task build2 -description "Explict settings with logging" {
 	Invoke-MSBuild `
 		-ProjectPath $Solution `
 		-Target $ProjectBuildTarget `
 		-Property (mergehashtables $Properties @{ 
-			DeployTarget = 'Package'
-			AutoParameterizationWebConfigConnectionStrings = 'false'
-			EnablePackageProcessLoggingAndAssert = 'true'
+			DeployTarget = 'Package'   # default: Package
+			AutoParameterizationWebConfigConnectionStrings = 'false'  # default: true 
+			EnablePackageProcessLoggingAndAssert = 'true'   # default: false
+            FilesToIncludeForPublish = 'OnlyFilesToRunTheApp'   #  AllFilesInProjectFolder, AllFilesInTheProject, default: OnlyFilesToRunTheApp
+            WebPublishPipelineProjectName = 'MyWebApp'   # default: project name
+            DefaultDeployIisAppPath = 'Default Web Site\MyWebApp123'   # default: Default Web Site\project name
 		})
 }
 
 
+task build3 -description "Just copy the files and do web.config transformations" {
+	Invoke-MSBuild `
+		-ProjectPath $Solution `
+		-Target $ProjectBuildTarget `
+		-Property (mergehashtables $Properties @{ 
+			DeployTarget = 'PipelinePreDeployCopyAllFilesToOneFolder'
+		})
+}
 
 
 function mergehashtables($htold, $htnew)
