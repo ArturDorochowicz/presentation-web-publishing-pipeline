@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - msbuild primer", "1 - m
 		msbuild-primer\README.md = msbuild-primer\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - WPP basics", "2 - WPP basics", "{58ACACB4-2584-487B-AE28-59BE00F0A6E7}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B8C7EDF1-8D40-4011-BC65-C0517C068DC5}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -17,8 +19,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B8C7ED
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP basics", "WPP basics\WPP basics.csproj", "{DF632D9B-8529-4676-B14F-C9E8A6F0F037}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF632D9B-8529-4676-B14F-C9E8A6F0F037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF632D9B-8529-4676-B14F-C9E8A6F0F037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF632D9B-8529-4676-B14F-C9E8A6F0F037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF632D9B-8529-4676-B14F-C9E8A6F0F037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF632D9B-8529-4676-B14F-C9E8A6F0F037} = {58ACACB4-2584-487B-AE28-59BE00F0A6E7}
 	EndGlobalSection
 EndGlobal
