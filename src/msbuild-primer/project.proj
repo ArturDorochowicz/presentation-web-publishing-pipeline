@@ -1,0 +1,37 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTarget="MyDefaultTarget">
+
+  <PropertyGroup>
+    <MyDefaultTargetDependsOn>FirstTarget</MyDefaultTargetDependsOn>
+    <FirstTargetMessage>In FirstTarget</FirstTargetMessage>
+    <AfterMyDefaultTargetMessage>abc</AfterMyDefaultTargetMessage>
+    <AfterMyDefaultTargetMessage>--- $(AfterMyDefaultTargetMessage) ---</AfterMyDefaultTargetMessage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TxtFiles Include="*.txt" />
+  </ItemGroup>
+
+  <Target Name="MyDefaultTarget" DependsOnTargets="$(MyDefaultTargetDependsOn)">
+    <Message Text="In MyDefaultTarget" Importance="high" />
+  </Target>
+
+  <Target Name="FirstTarget">
+    <Message Text="$(FirstTargetMessage)" Importance="high" />
+  </Target>
+  
+  <Target Name="BeforeMyDefaultTarget" BeforeTargets="MyDefaultTarget">
+    <Message Text="In BeforeMyDefaultTarget" Importance="high"/>
+  </Target>
+
+  <Target Name="AfterMyDefaultTarget" AfterTargets="MyDefaultTarget">
+    <Message Text="$(AfterMyDefaultTargetMessage)" Importance="high" />
+  </Target>
+
+  <Target Name="FileTarget">
+    <Message Text="%(TxtFiles.Filename)" Importance="high" />
+    <Message Text="-------------------------------------" Importance="high" />
+    <Message Text="@(TxtFiles)" Importance="high" />
+    <!-- Transformation -->
+    <Message Text="@(TxtFiles->'%(Identity)')" Importance="high" />
+  </Target>
+</Project>

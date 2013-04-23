@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - msbuild primer", "1 - msbuild primer", "{6590709D-CE67-4BE5-B4B2-9763D2134A72}"
+	ProjectSection(SolutionItems) = preProject
+		msbuild-primer\file1.txt = msbuild-primer\file1.txt
+		msbuild-primer\file2.txt = msbuild-primer\file2.txt
+		msbuild-primer\project.proj = msbuild-primer\project.proj
+		msbuild-primer\README.md = msbuild-primer\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
