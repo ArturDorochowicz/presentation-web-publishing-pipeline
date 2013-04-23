@@ -1,2 +1,2 @@
-presentation-web-publishing-pipeline
-====================================
+Web Publishing Pipeline Recipes
+===
