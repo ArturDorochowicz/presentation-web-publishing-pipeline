@@ -17,7 +17,7 @@ task basic_properties {
 #  DeployTarget=Package
 #  AutoParameterizationWebConfigConnectionStrings=true
 #  EnablePackageProcessLogginAndAssert=false
-#  FilesToIncludeForPublish=OnlyFilesToRunTheApp
+#  FilesToIncludeForPublish=OnlyFilesToRunTheApp   // AllFilesInProjectFolder, AllFilesInTheProject, OnlyFilesToRunTheApp
 #  WebPublishPipelineProjectName=<project-name>
 #  DefaultDeployIisAppPath=Default Web Site\<project-name>
 }
