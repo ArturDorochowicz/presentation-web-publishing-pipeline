@@ -1,5 +1,11 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="ShowMessage" BeforeTargets="Package">
-    <Message Text="Inside Web Publishing Pipeline" Importance="high" /> 
+
+  <Target Name="ShowMessageBeforeBuild" AfterTargets="BeforeBuild">
+    <Message Text=">>> After BeforeBuild, from Web Publishing Pipeline" Importance="high" /> 
   </Target>
+
+  <Target Name="ShowMessageBeforePackage" BeforeTargets="Package">
+    <Message Text=">>> Before Package, from Web Publishing Pipeline" Importance="high" /> 
+  </Target>
+
 </Project>
