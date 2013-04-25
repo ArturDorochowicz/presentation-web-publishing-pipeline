@@ -11,6 +11,7 @@ task basic_properties {
         /property:EnablePackageProcessLoggingAndAssert=true `
         /property:FilesToIncludeForPublish=OnlyFilesToRunTheApp `
         /property:WebPublishPipelineProjectName=MyWebApp `
+        /property:PackageLocation=publish `
         '/property:DefaultDeployIisAppPath=Default Web Site\MyWebApp123'
 
 # Defaults:
