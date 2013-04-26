@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+    Exclude files.
+  -->
+  <PropertyGroup>
+    <ExcludeFilesFromPackageDependsOn>
+      $(ExcludeFilesFromPackageDependsOn);
+      ExcludeScriptsJsFiles;
+    </ExcludeFilesFromPackageDependsOn>
+  </PropertyGroup>
+
+  <Target Name="ExcludeScriptsJsFiles">
+    <ItemGroup>
+      <ExcludeFromPackageFiles Include="Scripts\**\jquery*.js">
+        <FromTarget>ExcludeScriptsJsFiles</FromTarget>
+      </ExcludeFromPackageFiles>
+    </ItemGroup>
+  </Target>
+
+
+  <!--
+    Include additional files.
+  -->
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      $(CopyAllFilesToSingleFolderForMsdeployDependsOn);
+      IncludeExtraFiles;
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+  </PropertyGroup>
+
+  <Target Name="IncludeExtraFiles">
+    <ItemGroup>
+      <_CustomFiles Include="extra-files\**\*" />
+
+      <FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
+        <DestinationRelativePath>App_Data\extra-files\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+        <FromTarget>IncludeExtraFiles</FromTarget>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+
+
+<!--
+  References:
+  http://sedodream.com/2010/05/01/WebDeploymentToolMSDeployBuildPackageIncludingExtraFilesOrExcludingSpecificFiles.aspx
+-->
+</Project>
