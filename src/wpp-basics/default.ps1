@@ -21,4 +21,6 @@ task basic_properties {
 #  FilesToIncludeForPublish=OnlyFilesToRunTheApp   // AllFilesInProjectFolder, AllFilesInTheProject, OnlyFilesToRunTheApp
 #  WebPublishPipelineProjectName=<project-name>
 #  DefaultDeployIisAppPath=Default Web Site\<project-name>
+#  ExcludeGeneratedDebugSymbol=true   // when Configuration=Release, false otherwise
+#  ExcludeApp_Data=false 
 }
