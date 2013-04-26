@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - Simpler in-package dire
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8 - ASP.NET compilation", "8 - ASP.NET compilation", "{AE744C44-568E-4AD1-B757-CEA2B821738B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 - Skip deleting files on deployment", "9 - Skip deleting files on deployment", "{591C9B0B-902E-4BF4-9D40-5BB61F07441D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
