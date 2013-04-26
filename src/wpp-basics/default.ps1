@@ -1,10 +1,10 @@
 task defaults {
-    msbuild 'WPP basics.csproj' /verbosity:minimal /property:RequireRestoreConsent=false /property:Configuration=Release `
+    msbuild 'wpp-basics.csproj' /verbosity:minimal /property:RequireRestoreConsent=false /property:Configuration=Release `
         /property:DeployOnBuild=true
 }
 
 task basic_properties {
-    msbuild 'WPP basics.csproj' /verbosity:minimal /property:RequireRestoreConsent=false /property:Configuration=Release `
+    msbuild 'wpp-basics.csproj' /verbosity:minimal /property:RequireRestoreConsent=false /property:Configuration=Release `
         /property:DeployOnBuild=true `
         /property:DeployTarget=Package `
         /property:AutoParameterizationWebConfigConnectionStrings=false `

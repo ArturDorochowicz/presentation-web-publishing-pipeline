@@ -222,7 +222,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="WPP basics.wpp.targets" />
+    <Content Include="wpp-basics.wpp.targets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B8C7ED
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP basics", "WPP basics\WPP basics.csproj", "{DF632D9B-8529-4676-B14F-C9E8A6F0F037}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpp-basics", "wpp-basics\wpp-basics.csproj", "{DF632D9B-8529-4676-B14F-C9E8A6F0F037}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
