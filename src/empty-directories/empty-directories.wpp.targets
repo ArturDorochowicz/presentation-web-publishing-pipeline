@@ -1,0 +1,14 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <OnAfterPipelineCopyAllFilesToOneFolderForMsdeploy>
+      $(OnAfterPipelineCopyAllFilesToOneFolderForMsdeploy);
+      MakeEmptyDirs;
+    </OnAfterPipelineCopyAllFilesToOneFolderForMsdeploy>
+  </PropertyGroup>
+
+  <Target Name="MakeEmptyDirs">
+    <MakeDir Directories="$([System.IO.Path]::Combine($(_PackageTempDir), 'App_Data\logs'))" />
+  </Target>
+
+</Project>
