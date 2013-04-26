@@ -10,6 +10,7 @@
 4. Properties
    - property usage
    - setting from command line
+   - no visibility control, _PropertyName convention for "not public" properties
 5. Items
    - well known metadata with files
    - metadata usage
