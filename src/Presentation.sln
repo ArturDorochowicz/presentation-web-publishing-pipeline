@@ -29,6 +29,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Empty directories", "4 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "empty-directories", "empty-directories\empty-directories.csproj", "{AEA9BFA5-D79F-496F-B41E-3652FF0AFA26}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - MSDeploy parameters", "5 - MSDeploy parameters", "{B7595064-38EB-4C6A-9970-F63624FA4B55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - MSDeploy providers", "6 - MSDeploy providers", "{BA89DF44-23A5-4444-BBEC-C1BBB166718E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - Simpler in-package directory", "7 - Simpler in-package directory", "{43864357-8489-4817-A873-D33F646A3B48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8 - ASP.NET compilation", "8 - ASP.NET compilation", "{AE744C44-568E-4AD1-B757-CEA2B821738B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
