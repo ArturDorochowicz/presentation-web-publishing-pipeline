@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 - Skip deleting files on 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "short-path-in-package", "short-path-in-package\short-path-in-package.csproj", "{7D43908D-B90C-46F9-8C06-077B9DB8F2BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet-compilation", "aspnet-compilation\aspnet-compilation.csproj", "{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{7D43908D-B90C-46F9-8C06-077B9DB8F2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D43908D-B90C-46F9-8C06-077B9DB8F2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D43908D-B90C-46F9-8C06-077B9DB8F2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +78,6 @@ Global
 		{2607C144-556D-401F-A017-250DBB696EE9} = {CAC57D59-BAB4-426C-8693-5A697A011245}
 		{AEA9BFA5-D79F-496F-B41E-3652FF0AFA26} = {8119AE53-1B6D-4C50-ABD0-06C400D591E1}
 		{7D43908D-B90C-46F9-8C06-077B9DB8F2BA} = {43864357-8489-4817-A873-D33F646A3B48}
+		{BFCFF52D-1C3A-4FD5-BF55-42E452B3E206} = {AE744C44-568E-4AD1-B757-CEA2B821738B}
 	EndGlobalSection
 EndGlobal
