@@ -1,0 +1,29 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <EnableAddReplaceRuleForAppPath Condition="'$(EnableAddReplaceRuleForAppPath)' == ''">true</EnableAddReplaceRuleForAppPath>
+    <PackagePath Condition="'$(PackagePath)' == ''">application</PackagePath>
+    <PackageDependsOn>
+      $(PackageDependsOn);
+      AddReplaceRuleForAppPath;
+    </PackageDependsOn>
+  </PropertyGroup>
+
+  <Target Name="AddReplaceRuleForAppPath" Condition="'$(EnableAddReplaceRuleForAppPath)' == 'true'">
+    <PropertyGroup>
+      <_PkgPathFull>$([System.IO.Path]::GetFullPath($(_PackageTempDir)))</_PkgPathFull>
+    </PropertyGroup>
+
+    <EscapeTextForRegularExpressions Text="$(_PkgPathFull)">
+      <Output TaskParameter="Result" PropertyName="_PkgPathRegex" />
+    </EscapeTextForRegularExpressions>
+
+    <ItemGroup>
+      <MsDeployReplaceRules Include="replaceFullPath">
+        <Match>$(_PkgPathRegex)</Match>
+        <Replace>$(PackagePath)</Replace>
+      </MsDeployReplaceRules>
+    </ItemGroup>
+  </Target>
+
+</Project>
