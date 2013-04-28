@@ -1,0 +1,10 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>$(TargetName)-aspnet.dll</SingleAssemblyName>
+  </PropertyGroup>
+
+</Project>
