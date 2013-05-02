@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <MsDeploySkipRules Include="SkipDeleteLogs">
+      <SkipAction>Delete</SkipAction>
+      <ObjectName>filePath</ObjectName>
+      <!-- Regular expression, escape properties using EscapeTextForRegularExpressions task -->
+      <AbsolutePath>\\App_Data\\logs\\</AbsolutePath>
+    </MsDeploySkipRules>
+  </ItemGroup>
+
+<!--
+  References:
+    1. http://blog.richardszalay.com/2012/12/18/demystifying-msdeploy-skip-rules/
+-->
+
+<!--
+  Another example
+  Microsoft.Web.Publishing.targets contains the following:
+  
+  <Target Name="GenerateSkipRuleForAppData" Condition="$(SkipApp_DataFolder)">
+    <EscapeTextForRegularExpressions Text="$(WPPAllFilesInSingleFolder)">
+      <Output TaskParameter="Result" PropertyName="_Escaped_WPPAllFilesInSingleFolder" />
+    </EscapeTextForRegularExpressions>
+    <ItemGroup>
+      <MsDeploySkipRules Include="SkipAppDataOnDeploy">
+        <SkipAction></SkipAction>
+        <ObjectName>dirPath</ObjectName>
+        <AbsolutePath>$(_Escaped_WPPAllFilesInSingleFolder)\\App_Data$</AbsolutePath>
+        <Apply>Source</Apply>
+        <XPath></XPath>
+      </MsDeploySkipRules>
+      <MsDeploySkipRules Include="SkipAppDataOnDeploy">
+        <SkipAction></SkipAction>
+        <ObjectName>dirPath</ObjectName>
+        <AbsolutePath>$(_DestinationContentPath)\\App_Data$</AbsolutePath>
+        <Apply>Destination</Apply>
+        <XPath></XPath>
+      </MsDeploySkipRules>
+    </ItemGroup>
+  </Target>
+-->
+
+</Project>
