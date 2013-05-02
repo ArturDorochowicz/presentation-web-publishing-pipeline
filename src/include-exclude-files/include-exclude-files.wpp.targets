@@ -4,6 +4,13 @@
     Exclude files.
   -->
   <PropertyGroup>
+    <ExcludeFilesFromDeployment>Scripts\**\knockout*.js;Scripts\_references.js;Content\themes\base\images\**</ExcludeFilesFromDeployment>
+    <ExcludeFoldersFromDeployment>Content\themes\base\minified</ExcludeFoldersFromDeployment>
+  </PropertyGroup>
+
+<!-- or -->
+  
+  <PropertyGroup>
     <ExcludeFilesFromPackageDependsOn>
       $(ExcludeFilesFromPackageDependsOn);
       ExcludeScriptsJsFiles;
@@ -12,13 +19,12 @@
 
   <Target Name="ExcludeScriptsJsFiles">
     <ItemGroup>
-      <ExcludeFromPackageFiles Include="Scripts\**\jquery*.js">
+      <ExcludeFromPackageFiles Include="Scripts\**\jquery-ui*.js">
         <FromTarget>ExcludeScriptsJsFiles</FromTarget>
       </ExcludeFromPackageFiles>
     </ItemGroup>
   </Target>
-
-
+  
   <!--
     Include additional files.
   -->
