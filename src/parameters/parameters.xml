@@ -2,9 +2,9 @@
 <parameters>
   <parameter name="MySetting" description="MySetting description goes here.">
     <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/appSettings/add[@key='MySetting']/@value" />
-    <parameterValidation kind="RegularExpression" validationString="^\S{3,6}$" /> 
+    <parameterValidation kind="RegularExpression,AllowEmpty" validationString="^\S{3,6}$" /> 
   </parameter>
-  <parameter name="MyOtherSetting" description="MyOtherSetting description here." defaultValue="http://www.example.com/">
-    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/appSettings/add[@key='MyOtherSetting']/@value" />
+  <parameter name="MyEndpointAddress" description="MyEndpointAddress description here." defaultValue="http://api.search.live.net:80/soap.asmx">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/system.serviceModel/client/endpoint[@name='BingPort']/@address" />
   </parameter>
 </parameters>
