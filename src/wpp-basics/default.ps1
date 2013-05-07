@@ -20,7 +20,7 @@ task basic_properties {
 #  EnablePackageProcessLogginAndAssert=false
 #  FilesToIncludeForPublish=OnlyFilesToRunTheApp   // AllFilesInProjectFolder, AllFilesInTheProject, OnlyFilesToRunTheApp
 #  WebPublishPipelineProjectName=<project-name>
-#  DefaultDeployIisAppPath=Default Web Site\<project-name>
+#  DefaultDeployIisAppPath=Default Web Site\<project-name>_deploy
 #  ExcludeGeneratedDebugSymbol=true   // when Configuration=Release, false otherwise
 #  ExcludeApp_Data=false 
 }
