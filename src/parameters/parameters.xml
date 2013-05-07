@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<parameters>
+  <parameter name="MySetting" description="MySetting description goes here.">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/appSettings/add[@key='MySetting']/@value" />
+    <parameterValidation kind="RegularExpression" validationString="^\S{3,6}$" /> 
+  </parameter>
+  <parameter name="MyOtherSetting" description="MyOtherSetting description here." defaultValue="http://www.example.com/">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/appSettings/add[@key='MyOtherSetting']/@value" />
+  </parameter>
+</parameters>
