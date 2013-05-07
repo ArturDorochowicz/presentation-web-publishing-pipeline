@@ -26,4 +26,8 @@
     </ItemGroup>
   </Target>
 
+<!--
+  References:
+    1. http://sedodream.com/2013/01/13/WebPackagingFixingTheLongPathIssue.aspx 
+-->
 </Project>
