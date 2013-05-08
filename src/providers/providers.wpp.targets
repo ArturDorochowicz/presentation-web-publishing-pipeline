@@ -19,7 +19,6 @@
         <Match>^$(_EscapeRegEx_MSDeployDirPath)\\my-folder$</Match>
         <Description>Add write permission to the my-folder folder.</Description>
         <DefaultValue>{$(_MsDeployParameterNameForContentPath)}/my-folder</DefaultValue>
-        <Value>$(_DestinationContentPath)/my-folder</Value>
         <Tags>Hidden</Tags>
         <Priority>$(VsSetAclPriority)</Priority>
         <ExcludeFromSetParameter>True</ExcludeFromSetParameter>
