@@ -13,6 +13,8 @@
    - no visibility control, _PropertyName convention for "not public" properties
 5. Items
    - well known metadata with files
+     http://msdn.microsoft.com/en-us/library/ms164313.aspx
    - metadata usage
    - concatenation
    - transformations
+     http://msdn.microsoft.com/en-us/library/ms171476.aspx
