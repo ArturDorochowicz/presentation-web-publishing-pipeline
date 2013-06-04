@@ -1,2 +1,1 @@
-Web Publishing Pipeline Recipes
-===
+# Web Publishing Pipeline Recipes
