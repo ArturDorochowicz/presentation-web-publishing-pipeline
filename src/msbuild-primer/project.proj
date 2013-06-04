@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <TxtFiles Include="*.txt" />
+    <TxtFiles Include="*.txt" Exclude="*.txt" />
   </ItemGroup>
 
   <Target Name="MyDefaultTarget" DependsOnTargets="$(MyDefaultTargetDependsOn)">
