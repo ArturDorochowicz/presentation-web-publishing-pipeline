@@ -33,6 +33,6 @@
     <Message Text="-------------------------------------" Importance="high" />
     <Message Text="@(TxtFiles)" Importance="high" />
     <!-- Transformation -->
-    <Message Text="@(TxtFiles->'%(Identity)')" Importance="high" />
+    <Message Text="@(TxtFiles->'abc-%(Identity)')" Importance="high" />
   </Target>
 </Project>
