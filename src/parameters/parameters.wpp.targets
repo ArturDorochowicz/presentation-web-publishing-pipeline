@@ -7,4 +7,15 @@
     </MsDeployDeclareParameters>
   </ItemGroup>
 
+
+<!--
+  References:
+  1. Part on parameters.xml in 'Reference for the Web Application Package'
+     http://www.iis.net/learn/develop/windows-web-application-gallery/reference-for-the-web-application-package
+  2. Parameter kinds in 'Using declareParam and setParam'
+     http://technet.microsoft.com/en-us/library/dd569084(WS.10).aspx#BKMK_ParameterKindSettings
+  3. 'Web Deploy Parameterization in Action' on Vishal Joshi's blog
+     http://vishaljoshi.blogspot.com/2010/07/web-deploy-parameterization-in-action.html
+-->
+
 </Project>
